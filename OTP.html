@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp Verify</title>
+    <style>
+      *{
+        margin: 0;
+      }
+      body{
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display:flex;
+      }
+      h2{
+        text-align: center;
+        margin-bottom: 35px;
+      }
+      button{
+        margin-left: 120px;
+        margin-top: 35px;
+      }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h2>OTP VERIFY</h2>
+            <label >Enter Mobile No :</label>
+            <input type="number" id="mobnum" name="number" ><br>
+            <button type="button" onclick="sendotp()">Send OTP</button>
+        </div>
+    </div>
+    <script>
+      a="";
+      function sendotp()
+      {
+        a=document.getElementById('mobnum').value;
+        
+        if(a="^[6-9]+[0-9]{9}$")
+        {
+          c =Math.floor(Math.random()*10000);
+          alert("YOUR OTP Is  " + c)
+        }
+        else{
+          alert("Please Enter Correct Number")
+        }
+      }
+    </script>
+</body>
+</html>

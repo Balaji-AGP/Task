@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <div>
+
+        <h2>Js Topics</h2>
+        <div>
+            <h3>Array</h3>
+
+            <p id="arrOp"></p>
+
+            <script>
+
+                let arr = [20,50,10,2,89,52,10];
+
+                let arrOp = "";
+
+                arrOp = arr;
+                arrOp += "<br> Length :" + arr.length;
+                arr.push(100);
+                arr.push(60);
+                arr.push(500);
+                arrOp += "<br> Push 100,60,500 : " + arr;
+                arr.pop();
+                arrOp += "<br> Pop : " + arr;
+                arr.shift();
+                arrOp += "<br> Shift : " + arr;
+                arr.unshift(1000);
+                arrOp += "<br> Unshift 1000 : " + arr;
+                arrOp += "<br> indexOf 10 : " + arr.indexOf(10);
+                arrOp += "<br> last index of : " + arr.lastIndexOf(10);
+                arrOp += "<br> includes 89 : " + arr.includes(89);
+                arrOp += "<br> includes 600 : " + arr.includes(600);
+                arrOp += "<br> Reverse : " + arr.reverse();
+                arrOp += "<br> Sort : " + arr.sort();
+                arrOp += "<br> fill : " + arr.fill("***",2,5);
+                arrOp += "<br> Concat ['Harish','Sabari', 'karthi'] : " + arr.concat(['Harish', 'Sabari', 'Karthi']);
+                arrOp += "<br> Join by / " + arr.join("/");
+                arrOp += "<br> to String " + arr.toString();
+                arrOp += "<br> Array " + arr;
+
+                console.log(arr);
+                console.log(arr.toString());
+                
+
+
+                document.getElementById("arrOp").innerHTML = arrOp;
+                
+            </script>
+        </div>
+
+    </div>
+</body>
+</html>

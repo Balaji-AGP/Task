@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Logic</title>
+</head>
+<body>
+    <div>
+        <h2>Array Methods</h2>
+
+        <div>
+            <h3>Push Method</h3>
+            Enter New Element <input type="text" name="newEle" id="newEle"><br>
+            <button type="button" onclick="arrMethods('push')">Push</button>
+            <h3>Pop Method</h3>
+            <button type="button" onclick="arrMethods('pop')">Pop</button>
+            <h3>Shift Method</h3>
+            <button type="button" onclick="arrMethods('shift')">Shift</button>
+            <h3>UnShift Method</h3>
+            New Element : <input type="text" name="newShEle" id="newShEle"/>
+            <button type="button" onclick="arrMethods('unshift')">Unshift</button>
+            <h3>Includes Method</h3>
+            Search Element : <input type="text" name="srEle" id="srEle"/>
+            <button type="button" onclick="arrMethods('includes')">Search</button>
+            <span id="includesOp"></span>
+        </div>
+        <div>
+            <p id="arrOp"></p>
+        </div>
+
+
+        <script>
+            var arr=[50,60,70];
+            displayArr();
+
+            function arrMethods(methodname){
+                if(methodname=="push"){
+                   let newEle= document.getElementById('newEle').value;
+                    push(newEle);
+                }
+                else if(methodname=="pop"){
+                    pop();
+                }
+                else if(methodname=="shift"){
+                    shift();
+                }
+                else if(methodname=="unshift"){
+                    unShift(document.getElementById("newShEle").value);
+                    
+                }
+                else if(methodname == "includes"){
+                        includes(document.getElementById('srEle').value);
+                }
+                displayArr();
+            }
+
+            function displayArr(){
+                    let result = "";
+                    for(let idx=0; idx<arr.length; idx++){
+                        result += " " + arr[idx];
+                    }
+                    document.getElementById('arrOp').innerHTML = result;
+                }
+
+
+            function push(newEle){
+                    arr[arr.length] = newEle;
+                }
+                function pop(){
+                    arr = arr.splice(0,arr.length-1);
+                }
+                function shift(){
+                    arr = arr.splice(1);
+                }
+                function unShift(newEle){
+                   // arr = [newEle].concat(arr);
+
+                    let newArr = [newEle];
+                    for(let inx=0; inx<arr.length; inx++){
+                        newArr[inx+1] = arr[inx];
+                    } 
+                    arr = newArr;
+                }
+                
+                 function includes(srEle){
+
+                    for(let arrEle of arr){ //for(let idx=0; idx<arr.length; idx++)
+                        if(arrEle == srEle){
+                            document.getElementById('includesOp').innerHTML = "Available";
+                            break;
+                        }else{
+                            document.getElementById('includesOp').innerHTML = "Not Available";
+                        }
+                    }
+                }
+
+
+        </script>
+    </div>
+</body>
+</html>

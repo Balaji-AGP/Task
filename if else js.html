@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Task</title>
+    <style>
+        div{
+            border:2px solid aqua;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Task-1 Find the Max Between 2 Number </h2>
+           <input type="text" id="num1">
+           <input type="text" id="num2">
+           <button type="button" onclick="maxnumber()">Max</button>
+           <input type="text" id="num_n">
+           <br>
+           <hr>
+    </div>
+    <div>
+        <h2>Task-2 Find the Max Between  Number </h2>
+           <input type="text" id="number1">
+           <input type="text" id="number2">
+           <input type="text" id="number3">
+           <button type="button" onclick="maximum()">BIG NUM</button>
+           <input type="text" id="number_n">
+           <br>
+           <hr>
+    </div>
+    <div>
+        <h2> Task-3 positive or Negative</h2>
+         <input type="text" id="input" >
+        <button type="button" onclick="between()">=</button>
+        <input type="text" id="output">
+        <br>
+        <hr>
+    </div>
+    <div>
+        <h2>Task-4 leap year or not</h2>
+         <input type="text" id="year">
+         <button type="button" onclick="years()">=</button>
+         <input type="text" id="leapyear">
+         <br>
+        <hr>
+    </div>
+    <div>
+        <h2> Task-5 vowels</h2>
+        <input type="text" id="letter" onkeyup="vowels()">
+        <!---<button type="button" onclick="vowels()">=</button>-->
+        <input type="text" id="vowel">
+        <br>
+        <hr>
+    </div>
+    <div>
+        <h2>Task-6 Alphabet or number</h2>
+        <input type="text" id="alphabetor">
+        <button type="button" onclick="opener()">Add</button>
+        <input type="text" id="Result">
+        <br>
+        <hr>
+    </div>
+    <div>
+        <h2> Task-7 Switch Month Example</h2>
+        <input type="text"  id="month" />
+        <button type="button" onclick="allmonth()">ADD</button>
+        <input type="text" id="Result1">
+        <br>
+        <hr>
+    </div>
+    <div>
+        <h2> Task-8 Switch Week Example</h2>
+        <input type="text"  id="week" />
+        <button type="button" onclick="allweek()">ADD</button>
+        <input type="text" id="enter">
+        <br>
+        <hr>
+    </div>
+    <div>
+        <h2>Task-9  Grade using Marks</h2>
+        <input type="text" id="mark">
+        <button type="button" onclick="grate()">Calc Grade</button>
+        <input type="text"  id="grate_answer">
+    </div>
+
+    <div>
+        <h2>Task 9:Find the employees salary whose experience is greater than or equal 3 years and salary should be less than 20,000 then give 5% bonus</h2>
+        Enter basic pay: <input type="text"  id="bpay">
+        Enter experience: <input type="text" id="exp">
+        
+        <button type="button" name="" value="" onclick="amount()">Result</button>
+        <input id="famount">
+        <input id="f1amount">
+       <hr>
+   
+    </div>
+    <div>
+        <h2>Task 10:In a shop when you purchase item more than Rs.1000 you will rewarded 10% bonus else when the amount is
+            less than Rs.1000 then no discount.Find the total amount after discount</h2>
+        Enter Amount:<input type="text" name="" value="" id="Amt">
+        <button type="button" onclick="dis()">Result</button>
+        <h3 id="Adis0"></h3>
+        <h3 id="Adis1"></h3>
+        <h3 id="Adis"></h3>
+    
+    </div>
+
+
+
+    <script>
+        function maxnumber(){
+           let a = Number(document.getElementById('num1').value);
+           let b = Number(document.getElementById('num2').value);
+            if(a>b){
+                num_n.value = a;
+            }
+            else{
+                num_n.value = b;
+            }
+        }
+      
+
+        function maximum(){
+           let a = Number(document.getElementById('number1').value);
+           let b = Number(document.getElementById('number2').value);
+           let c = Number(document.getElementById('number3').value);
+           if(a>b&& a>c){
+            number_n.value = a;
+            }
+            else if(b>a && b>c){
+                number_n.value = b;
+            }
+            else if(c>a&&c>b) {
+                number_n.value =c;
+            }
+        }
+
+
+
+        function between(){
+             let number = Number (document.getElementById('input').value);
+            if(number>0){
+              output.value=" Positive Number";
+            }
+             else{
+             output.value=" Negative Number";
+            }
+         }
+         function years(){
+          let a=Number(document.getElementById('year').value);
+           if(a%4==0){
+            leapyear.value="Leap Year";
+            }
+           else{
+            leapyear.value="not a leap Year";
+            }
+         }
+         function vowels()
+         {
+        let l=document.getElementById('letter').value;
+           if(l=='a'||l=='e'||l=='i'||l=='o'||l=='u'){
+          vowel.value="vowels";
+           }
+           else if(!(l=='a'||l=='e'||l=='i'||l=='o'||l=='u')){
+          vowel.value="not a vowel";
+           }
+         }
+
+
+
+
+         function opener() {
+            let Alphabetor=Number(document.getElementById('alphabetor').value);
+
+            if(Number(Alphabetor) >= 0 || Number(Alphabetor) < 0)
+            {
+                Result.value="Number";
+            }
+            else{
+                Result.value="Alphabet";
+            }
+         }
+
+
+
+
+         function allmonth(){
+            let month = Number(document.getElementById('month').value);
+         switch(month){
+             case 1:
+              Result1.value=("Jan");
+               break;
+             case 2:
+             Result1.value=("Feb");
+             break;
+             case 3:
+             Result1.value=("Mar");
+             break;
+             case 4:
+             Result1.value=("Apr");
+             break;
+             case 5:
+             Result1.value=("May");
+             break;
+             case 6:
+             Result1.value=("Jun");
+             break;
+             case 7:
+             Result1.value=("Jul");
+             break;
+             case 8:
+             Result1.value=("Aug");
+             break;
+             case 9:
+            Result1.value=("Sept");
+            break;
+            case 10:
+            Result1.value=("Oct");
+            break;
+            case 11:
+            Result1.value=("Nov");
+            break;
+           case 12:
+           Result1.value=("Dec");
+           break;
+           default:
+           Result1.value=("Not a Month");
+           break;
+           }
+        }
+
+
+
+
+        function allweek(){
+            let week = Number(document.getElementById('week').value);
+         switch(week){
+             case 1:
+              enter.value=("Sunday");
+               break;
+             case 2:
+             enter.value=("Monday");
+             break;
+             case 3:
+             enter.value=("Tuesday");
+             break;
+             case 4:
+             enter.value=("Wednesday");
+             break;
+             case 5:
+             enter.value=("Thursday");
+             break;
+             case 6:
+             enter.value=("Friday");
+             break;
+             case 7:
+             enter.value=("Saturday");
+             break;
+           default:
+           enter.value=("Not a Week");
+           break;
+           }
+        }
+
+
+
+
+        function grate(){
+            let Marks = Number(document.getElementById('mark').value);
+            if(Marks>90&&Marks<=100){
+                grate_answer.value ="A**";
+            }
+            else if(Marks>80&&Marks<=89){
+                grate_answer.value ="A";
+            }
+            else if(Marks>70&&Marks<=79){
+                grate_answer.value ="B";
+            }
+            else if(Marks>60&&Marks<=69){
+                grate_answer.value ="C";
+            }
+            else if(Marks>50&&Marks<=59){
+                grate_answer.value ="D";
+            }
+            else if(Marks>40&&Marks<=49){
+                grate_answer.value ="E";
+            }
+            else if(Marks>0&&Marks<=39){
+                grate_answer.value ="Fail";
+            }
+
+        }
+
+
+        function amount()
+         {
+            let bpay=Number(document.getElementById('bpay').value);
+            let exp=Number(document.getElementById('exp').value);
+            let amt=0;
+            let result="";
+
+            if(bpay<=20000 && exp>=3)
+                {
+                   /* document.getElementById('famount').innerHTML="Amount before bonus"+bpay;*/
+                    amt=bpay*5/100;
+
+                    result=bpay+amt;
+                   /* document.getElementById('f1amount').innerHTML="Final amount after bonus"+result;*/
+
+                    famount.value=" amount before bonus"+bpay;
+                    f1amount.value="Final amount after bonus"+result;
+                }
+                else{
+                    amt=bpay;
+                   /* document.getElementById('famount').innerHTML=amt;*/
+                   famount.value=amt;
+                }
+         }
+
+
+
+         function dis() {
+            let Amt = document.getElementById('Amt').value;
+            let adis = "";
+            let result = "";
+            document.getElementById('Adis0').innerHTML = "Original Amount: " + Amt;
+            document.getElementById('Adis1').innerHTML = "Amount before  discount: " + Amt;
+            if (Amt >= 1000) {
+               
+                adis = 1000 * 10 / 100;
+                console.log(adis);
+                result = Amt-adis;
+                console.log(result);
+                document.getElementById('Adis').innerHTML = "Amount After discount: " + result;
+
+            }
+            else {
+                result = Amt
+                document.getElementById('Adis').innerHTML ="No discount: "+ result;
+            }
+        }
+    </script>
+</body>
+</html>

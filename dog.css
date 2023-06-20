@@ -1,0 +1,135 @@
+.dog{
+    background-color: yellow;
+    width: 1000px;
+    height: 1000px;
+}
+.ear{
+    background-color: brown;
+    width: 100px;
+    height: 150px;
+    position: relative;
+    z-index: 4;
+    top: 100px;
+    left: 285px;
+    border-radius: 0 0 60px 60px;
+}
+.face{
+    background-color: chocolate;
+    width: 175px;
+    height: 80px;
+    z-index: 1;
+    position: relative;
+    bottom: 50px;
+    left: 225px;
+    transform: skew(20deg);
+}
+.nose{
+    background-color: white;
+    width: 78px;
+    height: 80px;
+    z-index: 0;
+    position: relative;
+    bottom: 130px;
+    left: 155px;
+    border-radius: 0 0 0 90%;
+    transform: skew(20deg);
+}
+.nose1{
+    width: 20px;
+    height: 15px;
+    border-radius:  100% ;
+    background-color: black;
+    bottom: 215px;
+    left: 140px;
+    position: relative;
+}
+.eye{
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 100%;
+    position: relative;
+    bottom: 215px;
+   left: 260px;
+   z-index: 2;
+}
+.tag{
+    width: 100px;
+    height: 50px;
+    background-color: crimson;
+    position: relative;
+    left: 322px;
+    bottom: 165px;
+    z-index: 2;
+    transform: skew(20deg);
+}
+.body1{
+    width: 100px;
+    height: 180px;
+    background-color: grey;
+    position: relative;
+    bottom: 165px;
+    left: 364px;
+    z-index: 3;
+    transform: skew(20deg);
+}
+.leg{
+    width: 100px;
+    height: 180px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    left: 315px;
+    bottom: 444px;
+}
+.leg1{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    position: relative;
+    bottom: 484px;
+    left: 295px;
+    z-index: 1;
+    transform: skew(315deg);
+}
+.body2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(29, 27, 27);
+    position: relative;
+    bottom: 265px;
+    left: 378px;
+    border-radius: 100%  0 0 0;
+    transform: skew(20deg);
+    z-index: 4;
+}
+.tail{
+    width: 40px;
+    height: 100px;
+    position: relative;
+    left: 510px;
+    bottom: 700px;
+    border-left: 10px solid transparent;
+    border-bottom: 100px solid darkslategrey;
+    transform: skewX(145deg);
+}
+
+
+
+.tail2{
+    width: 0;
+    height: 0;
+    border-bottom: 70px solid white;
+    border-left: 38px solid transparent;
+    border-right: 5px solid transparent;
+    transform: rotatex(20deg);
+    transform: rotateY();
+
+    
+    /*border-right: 5px solid transparent;
+    border-left: 38px solid transparent;
+    border-bottom: 36px solid #FFFFFF;*/
+    position: relative;
+    left: 516px;
+    bottom: 868px;
+}
